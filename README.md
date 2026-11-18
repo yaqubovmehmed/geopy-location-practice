@@ -34,7 +34,7 @@ pip install -r requirements.txt
 
 ## Usage policy
 
-This example calls the public Nominatim service. It sets a project-specific User-Agent and a request timeout. Keep requests user-triggered and below one request per second; do not use the public service for bulk or repeated automated lookups. See the [Nominatim Usage Policy](https://operations.osmfoundation.org/policies/nominatim/) and [GeoPy Nominatim documentation](https://geopy.readthedocs.io/en/stable/#geopy.geocoders.Nominatim).
+This example calls the public Nominatim service. It sets a project-specific User-Agent and a request timeout. Keep requests user-triggered and below one request per second; do not use the public service for bulk or repeated automated lookups. The example prints OpenStreetMap attribution with the returned address. See the [Nominatim Usage Policy](https://operations.osmfoundation.org/policies/nominatim/) and [GeoPy Nominatim documentation](https://geopy.readthedocs.io/en/stable/#geopy.geocoders.Nominatim).
 
 ## Technology
 
