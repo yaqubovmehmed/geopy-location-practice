@@ -1,39 +1,43 @@
-# GeoPy Location Practice
+# GeoPy Reverse Geocoding Practice
 
-A simple Python project for converting geographic coordinates (latitude and longitude) into a readable location address using GeoPy and OpenStreetMap's Nominatim service.
-
-## What It Does
-
-The program takes:
-
-* Latitude
-* Longitude
-
-and uses reverse geocoding to find the corresponding location address.
-
-## How It Works
-
-1. `Nominatim` is imported from `geopy.geocoders`.
-2. The `get_location_name()` function receives latitude and longitude.
-3. `Nominatim` performs reverse geocoding.
-4. The coordinates are converted into a location address.
-5. The address is printed to the console.
+A small Python example that converts latitude and longitude into a readable address with GeoPy and OpenStreetMap Nominatim.
 
 ## Example
 
-```python
-print(get_location_name(**.****, **.****))
-```
+The script uses sample coordinates in Tashkent:
 
-The coordinates can be replaced with your own latitude and longitude values.
+\x60\x60\x60bash
+python geo.py
+\x60\x60\x60
 
-## Technologies
+To try another place, change the two numbers in the \x60__main__\x60 block of \x60geo.py\x60. The function returns an address, or \x60None\x60 when no result is found.
 
-* Python
-* GeoPy
-* Nominatim
-* OpenStreetMap
+## Setup
 
-## Purpose
+\x60\x60\x60bash
+python -m venv .venv
+\x60\x60\x60
 
-This project was created for learning and practicing reverse geocoding and working with geographic coordinates in Python.
+Activate the environment, then install the dependency:
+
+**Windows PowerShell**
+\x60\x60\x60powershell
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+\x60\x60\x60
+
+**Linux / macOS**
+\x60\x60\x60bash
+source .venv/bin/activate
+pip install -r requirements.txt
+\x60\x60\x60
+
+## Usage policy
+
+This example calls the public Nominatim service. It sets a project-specific User-Agent and a request timeout. Keep requests user-triggered and below one request per second; do not use the public service for bulk or repeated automated lookups. See the [Nominatim Usage Policy](https://operations.osmfoundation.org/policies/nominatim/) and [GeoPy Nominatim documentation](https://geopy.readthedocs.io/en/stable/#geopy.geocoders.Nominatim).
+
+## Technology
+
+- Python
+- GeoPy
+- OpenStreetMap Nominatim
